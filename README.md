@@ -1,6 +1,6 @@
 # TallerRefactoring
-## Correccion de codeSmells con tecnicas de refactorizacion 
-Se encontro los siguientes code Smellls 
+## Corrección de codeSmells con técnicas de refactorización 
+Se encontró los siguientes code Smellls 
 
 1.- Duplicate Code corregido con Extract Method
 
@@ -14,4 +14,5 @@ Se encontro los siguientes code Smellls
 
 6.- Feature Envy se lo corrigio reemplazando delegación con herencia
 
-Se agrega al repositorio la documentacion con la explicación de lo realizado en el repositorio
+Se agrega al repositorio la documentación con la explicación de lo realizado en el repositorio. Esta se encuentra en la carpeta
+Documentacion con la explicacion
