@@ -77,6 +77,11 @@ public class Estudiante{
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+    public ArrayList<Paralelo> getParalelos() {
+        return paralelos;
+    }
+    
     
     //Calcula y devuelve la nota inicial contando examen, deberes, lecciones y talleres. El teorico y el practico se calcula por parcial.
     public double CalcularNotaInicial(Paralelo p, double nexamen,double ndeberes, double nlecciones, double ntalleres){
