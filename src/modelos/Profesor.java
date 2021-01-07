@@ -10,20 +10,18 @@ public class Profesor {
     private int edad;
     private String direccion;
     private String telefono;
-    private InformacionAdicionalProfesor info;
     private int añosdeTrabajo;
     private String facultad;
     private double BonoFijo;
     private ArrayList<Paralelo> paralelos;
 
-    public Profesor(String codigo, String nombre, String apellido, int edad, String direccion, String telefono, InformacionAdicionalProfesor info, int añosdeTrabajo, String facultad, double BonoFijo, ArrayList<Paralelo> paralelos) {
+    public Profesor(String codigo, String nombre, String apellido, int edad, String direccion, String telefono,  int añosdeTrabajo, String facultad, double BonoFijo, ArrayList<Paralelo> paralelos) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.info = info;
         this.añosdeTrabajo = añosdeTrabajo;
         this.facultad = facultad;
         this.BonoFijo = BonoFijo;
@@ -129,19 +127,7 @@ public class Profesor {
         this.telefono = telefono;
     }
 
-    /**
-     * @return the info
-     */
-    public InformacionAdicionalProfesor getInfo() {
-        return info;
-    }
-
-    /**
-     * @param info the info to set
-     */
-    public void setInfo(InformacionAdicionalProfesor info) {
-        this.info = info;
-    }
+ 
 
     /**
      * @return the añosdeTrabajo
