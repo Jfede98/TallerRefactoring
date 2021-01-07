@@ -1,5 +1,5 @@
 # TallerRefactoring
-##Correccion de codeSmells con tecnicas de refactorizacion 
+## Correccion de codeSmells con tecnicas de refactorizacion 
 Se encontro los siguientes code Smellls 
 1.- Duplicate Code corregido con Extract Method
 2.- Long Parameter List corregido con distribución de responsabilidades
