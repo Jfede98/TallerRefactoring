@@ -3,6 +3,6 @@ package modelos;
 public class calcularSueldoProfesor {
     
     public double calcularSueldo(Profesor prof){
-        return prof.info.añosdeTrabajo*600 + prof.info.BonoFijo;
+        return prof.getInfo().añosdeTrabajo*600 + prof.getInfo().BonoFijo;
     }  
 }
