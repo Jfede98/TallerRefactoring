@@ -11,12 +11,13 @@ package modelos;
  */
 public class ObtenerNotas {
     Estudiante e;
+    public Notas notas;
     //Calcula y devuelve la nota inicial contando examen, deberes, lecciones y talleres. El teorico y el practico se calcula por parcial.
-    public double CalcularNotaInicial(Paralelo p, double nexamen,double ndeberes, double nlecciones, double ntalleres){
+    public double CalcularNotaInicial(Notas notas){
         double notaInicial=0;
         for(Paralelo par:e.getParalelos()){
-            if(p.equals(par)){
-                calcularNota(nexamen,ndeberes,nlecciones,ntalleres);
+            if(notas.pa.equals(par)){
+                notaInicial=calcularNota(notas.getNexamen(),notas.getNdeberes(),notas.getNlecc(),notas.getNtalleres());
             }
         }
         return notaInicial;
@@ -24,11 +25,11 @@ public class ObtenerNotas {
     
     //Calcula y devuelve la nota final contando examen, deberes, lecciones y talleres. El teorico y el practico se calcula por parcial.
     
-    public double CalcularNotaFinal(Paralelo p, double nexamen,double ndeberes, double nlecciones, double ntalleres){
+    public double CalcularNotaFinal(Notas notas){
         double notaFinal=0;
         for(Paralelo par:e.getParalelos()){
-            if(p.equals(par)){
-                calcularNota(nexamen,ndeberes,nlecciones,ntalleres);
+            if(notas.pa.equals(par)){
+                notaFinal=calcularNota(notas.getNexamen(),notas.getNdeberes(),notas.getNlecc(),notas.getNtalleres());
             }
         }
         return notaFinal;
