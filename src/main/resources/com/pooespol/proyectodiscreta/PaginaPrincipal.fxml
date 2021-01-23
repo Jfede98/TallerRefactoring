@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="515.0" prefWidth="853.0" style="-fx-background-image: url('file:/C:FondoPrincipal.jpg'); -fx-background-size: 853 515;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pooespol.proyectodiscreta.PaginaPrincipalController">
+   <children>
+      <Label layoutX="194.0" layoutY="49.0" text="TITULO DEL PROYECTO">
+         <font>
+            <Font name="Britannic Bold" size="45.0" />
+         </font>
+      </Label>
+      <Button layoutX="580.0" layoutY="178.0" mnemonicParsing="false" onAction="#irNivelFacil" prefHeight="51.0" prefWidth="216.0" style="-fx-background-radius: 20;" text="FACIL">
+         <font>
+            <Font name="Britannic Bold" size="23.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor></Button>
+      <Button layoutX="579.0" layoutY="239.0" mnemonicParsing="false" onAction="#irNivelIntermedio" prefHeight="51.0" prefWidth="216.0" style="-fx-background-radius: 20;" text="INTERMEDIO">
+         <font>
+            <Font name="Britannic Bold" size="23.0" />
+         </font></Button>
+      <Button layoutX="579.0" layoutY="305.0" mnemonicParsing="false" onAction="#irNivelDificil" prefHeight="51.0" prefWidth="216.0" style="-fx-background-radius: 20;" text="DIFICIL">
+         <font>
+            <Font name="Britannic Bold" size="23.0" />
+         </font></Button>
+      <Label layoutX="583.0" layoutY="150.0" text="Elige el Tipo de Dificultad:">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="230.0" fitWidth="346.0" layoutX="73.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenPrincipal.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

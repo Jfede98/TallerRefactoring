@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane" prefHeight="515.0" prefWidth="853.0" style="-fx-background-image: url('file:/C:FondoNiveles.jpg'); -fx-background-size: 853 515;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pooespol.proyectodiscreta.PaginaFacilController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#90db00a3" height="393.0" layoutX="52.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" width="260.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff98" height="371.0" layoutX="333.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" width="499.0" />
+   </children>
+</AnchorPane>
