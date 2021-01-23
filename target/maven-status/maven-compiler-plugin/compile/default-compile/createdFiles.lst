@@ -1,6 +1,11 @@
+Categorias\Fruit.class
+Categorias\ObjectSet.class
 com\pooespol\proyectodiscreta\App.class
+com\pooespol\proyectodiscreta\PaginaDificilController.class
 module-info.class
 com\pooespol\proyectodiscreta\PaginaIntermedioController.class
 com\pooespol\proyectodiscreta\PaginaFacilController.class
+Categorias\Plant.class
+com\pooespol\proyectodiscreta\Categoria.class
+Categorias\Animal.class
 com\pooespol\proyectodiscreta\PaginaPrincipalController.class
-com\pooespol\proyectodiscreta\PaginaDificilController.class
