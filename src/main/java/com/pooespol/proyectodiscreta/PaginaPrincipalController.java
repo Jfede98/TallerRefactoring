@@ -14,7 +14,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -39,12 +38,10 @@ public class PaginaPrincipalController implements Initializable {
           
     }
             
-            
-            
     @FXML
     void irNivelFacil(ActionEvent event){
         try {
-                FXMLLoader loader=new FXMLLoader(getClass().getResource("PaginaFacil.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("PaginaFacil.fxml"));
                 Parent root= loader.load();
                 Scene scene = new Scene(root);
                 Stage stage = new Stage();
@@ -56,6 +53,7 @@ public class PaginaPrincipalController implements Initializable {
               System.out.println(ex.getMessage());  
             }
     }
+    
     @FXML
     void irNivelIntermedio(ActionEvent event){
         try {

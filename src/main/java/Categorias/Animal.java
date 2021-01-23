@@ -24,7 +24,7 @@ public class Animal implements ObjectSet{
     HashSet<String> marinos = new HashSet<>(Arrays.asList(marino));
     HashSet<String> aereos = new HashSet<>(Arrays.asList(aereo));
     
-    HashSet<String> union = joinAll(terrestres, marinos, aereos);
+    HashSet<String> unionalll = joinAll(terrestres, marinos, aereos);
 
     @Override
     public HashSet<String> joinAll (HashSet<String> s1, HashSet<String> s2, HashSet<String> s3){
@@ -38,6 +38,15 @@ public class Animal implements ObjectSet{
         HashSet<String> s1Clone = (HashSet)s1.clone();
         s1Clone.addAll(s2);
         return s1Clone;
+    }
+    
+    public static void main (String[] args){
+        Animal a = new Animal();
+        System.out.println(a.joinAll(a.terrestres, a.marinos, a.aereos));
+        
+        System.out.println(a.joinAll(a.terrestres, a.aereos));
+        
+        System.out.println(a.joinAll(a.terrestres, a.marinos));
     }
     
 }
