@@ -22,44 +22,31 @@ import javafx.scene.layout.GridPane;
  */
 public class PaginaFacilController implements Initializable {
 
-    String direction = "/main/resources/image";  
+    String direction = "/main/resources/Image";  
+    String category = PaginaPrincipalController.category;
     ObjectSet type;
     GridPane container;
     
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        fillContainer();
     }    
     
-   // @FXML
-    public ImageView createImage (String category, String element){
-        ImageView iv = new ImageView(new Image(getClass().getResource(direction + category +"/" + element + ".png").toString()));
-        iv.setFitHeight(30);
-        iv.setFitWidth(30);  
+    public ImageView createImage (String name){
+        ImageView iv = new ImageView(new Image(getClass().getResource(direction + category +"/" + name + ".png").toString()));
+//        iv.setFitHeight(30);
+//        iv.setFitWidth(30);  
+        
         return iv;
     }
     
-    void fillContainer(String category){
-        setType(category);
-        for(String s: ObjectSet.union){
-            container.getChildren().addAll(createImage(category, s));
+    void fillContainer(){
+        for(String s: PaginaPrincipalController.elements){
+            container.getChildren().addAll(createImage(s));
         }    
     }
     
-    private void setType(String category){
-        switch(category){
-            case "Animales":
-                type = new Animal();
-                break;
-            case "Frutas":
-                type = new Fruit();
-                break;
-            case "Plantas":
-                type = new Plant();
-                break;
-            default:
-                System.out.println("Error en Seleccionar categoría");      
-        }
-    }
+
+    
 }

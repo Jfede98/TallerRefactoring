@@ -12,41 +12,37 @@ import java.util.HashSet;
  *
  * @author Bryan
  */
-public class Animal implements ObjectSet{
+public class Animal extends ObjectSet{
     
     final static String FILE = "/main/resources/imageanimals/";  
     
-    final String[] terrestre = {"caballo", "cocodrilo", "elefante", "gato", "hipopotamo", "mono", "perro", "pinguino"}; 
-    final String[] marino = {"atun", "caballitodemar", "cocodrilo", "hipopotamo", "pato", "pinguino", "pulpo", "tiburon"};
-    final String[] aereo = {"buho", "condor", "paloma", "pato"};
+    final static String[] terrestre = {"caballo", "cocodrilo", "elefante", "gato", "hipopotamo", "mono", "perro", "pinguino"}; 
+    final static String[] marino = {"atun", "caballitodemar", "cocodrilo", "hipopotamo", "pato", "pinguino", "pulpo", "tiburon"};
+    final static String[] aereo = {"buho", "condor", "paloma", "pato"};
     
-    HashSet<String> terrestres = new HashSet<>(Arrays.asList(terrestre));
-    HashSet<String> marinos = new HashSet<>(Arrays.asList(marino));
-    HashSet<String> aereos = new HashSet<>(Arrays.asList(aereo));
+    public static HashSet<String> terrestres = new HashSet<>(Arrays.asList(terrestre));
+    public static HashSet<String> marinos = new HashSet<>(Arrays.asList(marino));
+    public static HashSet<String> aereos = new HashSet<>(Arrays.asList(aereo));
     
-    HashSet<String> unionalll = joinAll(terrestres, marinos, aereos);
+    public static HashSet<String> unionAll = joinAll(terrestres, marinos, aereos);
 
-    @Override
-    public HashSet<String> joinAll (HashSet<String> s1, HashSet<String> s2, HashSet<String> s3){
-        HashSet<String> s1Clone = (HashSet)s1.clone();
-        s1Clone.addAll(s2);
-        s1Clone.addAll(s3);
-        return s1Clone;
-    }
+
     
-    public HashSet<String> joinAll(HashSet<String> s1, HashSet<String> s2){
-        HashSet<String> s1Clone = (HashSet)s1.clone();
-        s1Clone.addAll(s2);
-        return s1Clone;
-    }
+//    public HashSet<String> joinAll(HashSet<String> s1, HashSet<String> s2){
+//        HashSet<String> s1Clone = (HashSet)s1.clone();
+//        s1Clone.addAll(s2);
+//        return s1Clone;
+//    }
     
-    public static void main (String[] args){
-        Animal a = new Animal();
-        System.out.println(a.joinAll(a.terrestres, a.marinos, a.aereos));
-        
-        System.out.println(a.joinAll(a.terrestres, a.aereos));
-        
-        System.out.println(a.joinAll(a.terrestres, a.marinos));
-    }
+//    public static void main (String[] args){
+//
+//        System.out.println(joinAll(terrestres, marinos, aereos));
+//        
+//        System.out.println(a.joinAll(a.terrestres, aereos));
+//        
+//        System.out.println(a.joinAll(a.terrestres, a.marinos));
+//    }
+
+    
     
 }

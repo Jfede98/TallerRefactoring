@@ -5,8 +5,13 @@
  */
 package com.pooespol.proyectodiscreta;
 
+import Categorias.Animal;
+import Categorias.Fruit;
+import Categorias.ObjectSet;
+import Categorias.Plant;
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashSet;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +19,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -25,64 +31,104 @@ import javafx.stage.Stage;
  */
 public class PaginaPrincipalController implements Initializable {
 
-    @FXML private Pane containerButton;
-    
+    @FXML
+//    private Pane containerButton;
+//    static ObjectSet type;
+    static HashSet<String> elements;
+    static String category = "Animales";
+//    @FXML
+//    private Button buttonEasy;
+//    @FXML
+//    private Button buttonMedium;
+//    @FXML
+//    private Button buttonHard;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
+    }
+
+    @FXML
+    void setToLevelButtons() {
+
+    }
+
+    @FXML
+    void irNivelFacil(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("PaginaFacil.fxml"));
+            Parent root = loader.load();
+            setMainScene(root, "Facil");
+//            Scene scene = new Scene(root);
+//            //Stage stage = new Stage();
+//            App.stage.setScene(scene);
+//            App.stage.initModality(Modality.APPLICATION_MODAL);
+//            App.stage.setTitle("Nivel Facil");
+//            //stage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    @FXML
+    void irNivelIntermedio(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("PaginaIntermedio.fxml"));
+            Parent root = loader.load();
+            setMainScene(root, "Intermedio");
+//            Scene scene = new Scene(root);
+//            //Stage stage = new Stage();
+//            App.stage.setScene(scene);
+//            App.stage.initModality(Modality.APPLICATION_MODAL);
+//            App.stage.setTitle("Nivel Intermedio");
+//            //stage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    @FXML
+    void irNivelDificil(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("PaginaDificil.fxml"));
+            Parent root = loader.load();
+            setMainScene(root, "Dificil");
+//            Scene scene = new Scene(root);
+//            //Stage stage = new Stage();
+//            App.stage.setScene(scene);
+//            App.stage.initModality(Modality.APPLICATION_MODAL);
+//            App.stage.setTitle("Nivel Dificil");
+//            //stage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    void setMainScene(Parent root, String label) {
+        setElemtents();
+        Scene scene = new Scene(root);
+        //Stage stage = new Stage();
+        App.stage.setScene(scene);
+        App.stage.initModality(Modality.APPLICATION_MODAL);
+        App.stage.setTitle("Nivel " + label);
+        //stage.show();
+    }
+    
+        private void setElemtents(){
+        switch(category){
+            case "Animales":
+                elements = Animal.unionAll;
+                break;
+            case "Frutas":
+                //elements = Fruit.unionAll;
+                break;
+            case "Plantas":
+                //elements = Plant.unionAll;
+                break;
+            default:
+                System.out.println("Error en Seleccionar categoría");      
+        }
         
-    }    
-    
-    
-    @FXML
-    void setToLevelButtons(){
-          
+        
     }
-            
-    @FXML
-    void irNivelFacil(ActionEvent event){
-        try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("PaginaFacil.fxml"));
-                Parent root= loader.load();
-                Scene scene = new Scene(root);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.initModality(Modality.APPLICATION_MODAL);
-                stage.setTitle("Nivel Facil");
-                stage.show();
-            } catch (IOException ex) {
-              System.out.println(ex.getMessage());  
-            }
-    }
-    
-    @FXML
-    void irNivelIntermedio(ActionEvent event){
-        try {
-                FXMLLoader loader=new FXMLLoader(getClass().getResource("PaginaIntermedio.fxml"));
-                Parent root= loader.load();
-                Scene scene=new Scene(root);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.initModality(Modality.APPLICATION_MODAL);
-                stage.setTitle("Nivel Intermedio");
-                stage.show();
-            } catch (IOException ex) {
-              System.out.println(ex.getMessage());  
-            }
-    }
-    @FXML
-    void irNivelDificil(ActionEvent event){
-        try {
-                FXMLLoader loader=new FXMLLoader(getClass().getResource("PaginaDificil.fxml"));
-                Parent root= loader.load();
-                Scene scene=new Scene(root);
-                Stage stage = new Stage();
-                stage.setScene(scene);
-                stage.initModality(Modality.APPLICATION_MODAL);
-                stage.setTitle("Nivel Dificil");
-                stage.show();
-            } catch (IOException ex) {
-              System.out.println(ex.getMessage());  
-            }
-    }
-    
 }

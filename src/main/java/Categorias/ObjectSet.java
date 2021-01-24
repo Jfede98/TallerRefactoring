@@ -11,10 +11,36 @@ import java.util.HashSet;
  *
  * @author Bryan
  */
-public interface ObjectSet {
+public abstract class ObjectSet {
     
     HashSet<String> union = new HashSet<>();
+
+    HashSet<String> joinAll(HashSet<String> s1, HashSet<String> s2){
+        HashSet<String> unionSet = (HashSet)s1.clone();
+        unionSet.addAll(s2);
+        return unionSet;
+    }
     
-    HashSet<String> joinAll(HashSet<String> s1, HashSet<String> s2, HashSet<String> s3);
+    static HashSet<String> joinAll(HashSet<String> s1, HashSet<String> s2, HashSet<String> s3){
+        HashSet<String> unionSet = (HashSet)s1.clone();
+        unionSet.addAll(s2);
+        unionSet.addAll(s3);
+        return unionSet;
+    }
+    
+    HashSet<String> intersectionAll(HashSet<String> s1, HashSet<String> s2){
+        HashSet<String> intersectionSet = (HashSet)s1.clone();
+        intersectionSet.retainAll(s2);
+        return intersectionSet;
+    }
+    
+    HashSet<String> intersectionAll(HashSet<String> s1, HashSet<String> s2, HashSet<String> s3){
+        HashSet<String> intersectionSet = (HashSet)s1.clone();
+        intersectionSet.retainAll(s2);
+        intersectionSet.retainAll(s3);
+        return intersectionSet;
+    }
+    
+    
     
 }

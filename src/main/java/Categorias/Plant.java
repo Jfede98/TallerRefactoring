@@ -11,11 +11,8 @@ import java.util.HashSet;
  *
  * @author Bryan
  */
-public class Plant implements ObjectSet{
+public class Plant extends ObjectSet{
 
-    @Override
-    public HashSet<String> joinAll(HashSet<String> s1, HashSet<String> s2, HashSet<String> s3) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
     
 }
