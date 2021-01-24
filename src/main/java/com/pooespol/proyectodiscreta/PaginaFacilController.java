@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 
 /**
@@ -25,7 +26,8 @@ public class PaginaFacilController implements Initializable {
     String direction = "/main/resources/Image";  
     String category = PaginaPrincipalController.category;
     ObjectSet type;
-    GridPane container;
+    @FXML
+    FlowPane containerImages;
     
     
     @Override
@@ -34,16 +36,20 @@ public class PaginaFacilController implements Initializable {
     }    
     
     public ImageView createImage (String name){
+//        double startX, startY = 0;
+        //System.out.println("print antes image view");
         ImageView iv = new ImageView(new Image(getClass().getResource(direction + category +"/" + name + ".png").toString()));
-//        iv.setFitHeight(30);
-//        iv.setFitWidth(30);  
-        
         return iv;
+        //ImageView imageView1 = null;
+//        Image image1 = new Image("/src/main/resources/ImageAnimales/" + name + ".png", 18, 30, false, false);
+//        return new ImageView(image1);
     }
     
     void fillContainer(){
+        System.out.println("elements en fillcontainer:" + PaginaPrincipalController.elements.size());
         for(String s: PaginaPrincipalController.elements){
-            container.getChildren().addAll(createImage(s));
+            containerImages.getChildren().add(createImage(s));
+//            System.out.println(s);
         }    
     }
     

@@ -34,7 +34,7 @@ public class PaginaPrincipalController implements Initializable {
     @FXML
 //    private Pane containerButton;
 //    static ObjectSet type;
-    static HashSet<String> elements;
+    static HashSet<String> elements = new HashSet<>();
     static String category = "Animales";
 //    @FXML
 //    private Button buttonEasy;
@@ -45,7 +45,7 @@ public class PaginaPrincipalController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        setElements();
     }
 
     @FXML
@@ -58,13 +58,15 @@ public class PaginaPrincipalController implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("PaginaFacil.fxml"));
             Parent root = loader.load();
-            setMainScene(root, "Facil");
-//            Scene scene = new Scene(root);
-//            //Stage stage = new Stage();
-//            App.stage.setScene(scene);
-//            App.stage.initModality(Modality.APPLICATION_MODAL);
-//            App.stage.setTitle("Nivel Facil");
-//            //stage.show();
+            //setElements();
+            System.out.println("dentro irNivel: "+ elements.size());
+            Scene scene = new Scene(root);
+//            setMainScene(scene, "Facil");
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Nivel Facil");
+            stage.show();
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
@@ -75,7 +77,7 @@ public class PaginaPrincipalController implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("PaginaIntermedio.fxml"));
             Parent root = loader.load();
-            setMainScene(root, "Intermedio");
+//            setMainScene(root, "Intermedio");
 //            Scene scene = new Scene(root);
 //            //Stage stage = new Stage();
 //            App.stage.setScene(scene);
@@ -92,7 +94,7 @@ public class PaginaPrincipalController implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("PaginaDificil.fxml"));
             Parent root = loader.load();
-            setMainScene(root, "Dificil");
+//            setMainScene(root, "Dificil");
 //            Scene scene = new Scene(root);
 //            //Stage stage = new Stage();
 //            App.stage.setScene(scene);
@@ -104,9 +106,9 @@ public class PaginaPrincipalController implements Initializable {
         }
     }
 
-    void setMainScene(Parent root, String label) {
-        setElemtents();
-        Scene scene = new Scene(root);
+    void setMainScene(Scene scene, String label) {
+        setElements();
+//        Scene scene = new Scene(root);
         //Stage stage = new Stage();
         App.stage.setScene(scene);
         App.stage.initModality(Modality.APPLICATION_MODAL);
@@ -114,10 +116,10 @@ public class PaginaPrincipalController implements Initializable {
         //stage.show();
     }
     
-        private void setElemtents(){
+    public void setElements(){
         switch(category){
             case "Animales":
-                elements = Animal.unionAll;
+                elements = Animal.unionAll;           
                 break;
             case "Frutas":
                 //elements = Fruit.unionAll;
@@ -127,8 +129,6 @@ public class PaginaPrincipalController implements Initializable {
                 break;
             default:
                 System.out.println("Error en Seleccionar categoría");      
-        }
-        
-        
+        }    
     }
 }

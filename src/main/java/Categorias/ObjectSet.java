@@ -15,7 +15,7 @@ public abstract class ObjectSet {
     
     HashSet<String> union = new HashSet<>();
 
-    HashSet<String> joinAll(HashSet<String> s1, HashSet<String> s2){
+    static HashSet<String> joinAll(HashSet<String> s1, HashSet<String> s2){
         HashSet<String> unionSet = (HashSet)s1.clone();
         unionSet.addAll(s2);
         return unionSet;
