@@ -55,13 +55,24 @@ public class PaginaPrincipalController implements Initializable {
 
     @FXML
     void irNivelFacil(ActionEvent event) {
+        cambioScene("PaginaFacil.fxml","Nivel Facil"); 
+    }
+
+    @FXML
+    void irNivelIntermedio(ActionEvent event) {
+        cambioScene("PaginaIntermedio.fxml","Nivel Intermedio"); 
+    }
+
+    @FXML
+    void irNivelDificil(ActionEvent event) {
+                cambioScene("PaginaDificil.fxml","Nivel Dificil"); 
+    }
+
+    void cambioScene(String nombre, String nivel) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("PaginaFacil.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(nombre));
             Parent root = loader.load();
-            //setElements();
-            System.out.println("dentro irNivel: "+ elements.size());
             Scene scene = new Scene(root);
-//            setMainScene(scene, "Facil");
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.initModality(Modality.APPLICATION_MODAL);
@@ -70,50 +81,6 @@ public class PaginaPrincipalController implements Initializable {
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
-    }
-
-    @FXML
-    void irNivelIntermedio(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("PaginaIntermedio.fxml"));
-            Parent root = loader.load();
-//            setMainScene(root, "Intermedio");
-//            Scene scene = new Scene(root);
-//            //Stage stage = new Stage();
-//            App.stage.setScene(scene);
-//            App.stage.initModality(Modality.APPLICATION_MODAL);
-//            App.stage.setTitle("Nivel Intermedio");
-//            //stage.show();
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
-    }
-
-    @FXML
-    void irNivelDificil(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("PaginaDificil.fxml"));
-            Parent root = loader.load();
-//            setMainScene(root, "Dificil");
-//            Scene scene = new Scene(root);
-//            //Stage stage = new Stage();
-//            App.stage.setScene(scene);
-//            App.stage.initModality(Modality.APPLICATION_MODAL);
-//            App.stage.setTitle("Nivel Dificil");
-//            //stage.show();
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
-        }
-    }
-
-    void setMainScene(Scene scene, String label) {
-        setElements();
-//        Scene scene = new Scene(root);
-        //Stage stage = new Stage();
-        App.stage.setScene(scene);
-        App.stage.initModality(Modality.APPLICATION_MODAL);
-        App.stage.setTitle("Nivel " + label);
-        //stage.show();
     }
     
     public void setElements(){

@@ -6,15 +6,24 @@
 package com.pooespol.proyectodiscreta;
 
 import Categorias.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -22,12 +31,11 @@ import javafx.scene.layout.GridPane;
  * @author Adriel Robles
  */
 public class PaginaFacilController implements Initializable {
-
-    String direction = "/main/resources/Image";  
+    private double startX = 0, startY = 0;
     String category = PaginaPrincipalController.category;
     ObjectSet type;
     @FXML
-    FlowPane containerImages;
+    Pane containerImages;
     
     
     @Override
@@ -36,20 +44,52 @@ public class PaginaFacilController implements Initializable {
     }    
     
     public ImageView createImage (String name){
-//        double startX, startY = 0;
-        //System.out.println("print antes image view");
-        ImageView iv = new ImageView(new Image(getClass().getResource(direction + category +"/" + name + ".png").toString()));
-        return iv;
-        //ImageView imageView1 = null;
-//        Image image1 = new Image("/src/main/resources/ImageAnimales/" + name + ".png", 18, 30, false, false);
-//        return new ImageView(image1);
+       ImageView imageView1 = null;
+        try (FileInputStream input = new FileInputStream(App.pathImg+name+".png")) {
+            Image image = new Image(input, 80, 80, false, false);
+            imageView1 = new ImageView(image);
+        } catch (FileNotFoundException ex) {
+            System.out.println(ex.getMessage());
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+        imageView1.setOnMousePressed(new EventHandler<MouseEvent>(){
+           @Override
+           public void handle(MouseEvent t) {
+                 startX = t.getX();
+                 startY = t.getY();
+           }
+            
+        });
+        imageView1.setOnMouseDragged(new EventHandler<MouseEvent>(){
+           @Override
+           public void handle(MouseEvent t) {
+               Node n = (Node) t.getTarget();
+               if(n instanceof Text)
+                   n = n.getParent();
+               n.layoutXProperty().set(n.getLayoutX()+t.getX()-startX);
+               n.layoutYProperty().set(n.getLayoutY()+t.getY()-startY);
+           }
+            
+        });
+        return imageView1;
     }
     
     void fillContainer(){
-        System.out.println("elements en fillcontainer:" + PaginaPrincipalController.elements.size());
+        int contador =0;
+        double posicionX=0;
+        double posicionY=0;
         for(String s: PaginaPrincipalController.elements){
-            containerImages.getChildren().add(createImage(s));
-//            System.out.println(s);
+            ImageView imagen = createImage(s);
+            if ((contador%3==0)&& contador!=0){
+                posicionY=posicionY+80;
+                posicionX=0;
+            }
+            imagen.setX(posicionX);
+            imagen.setY(posicionY);
+            containerImages.getChildren().add(imagen);
+            posicionX=posicionX+80;
+            contador++;
         }    
     }
     

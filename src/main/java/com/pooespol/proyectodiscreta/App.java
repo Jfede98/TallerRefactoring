@@ -11,8 +11,8 @@ import static javafx.application.Application.launch;
  * JavaFX App
  */
 public class App extends Application {
-    public static String pathImg="src/main/resources/images/";
-    public static String pathFiles="src/main/resources/files/";
+    public static String pathImg="src/main/resources/Images/";
+    public static String pathFiles="src/main/resources/Files/";
     private static Scene scene;
     public static Stage stage;
     public static Parent root;

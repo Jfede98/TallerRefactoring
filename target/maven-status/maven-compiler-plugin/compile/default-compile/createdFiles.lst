@@ -5,6 +5,8 @@ com\pooespol\proyectodiscreta\PaginaDificilController.class
 module-info.class
 com\pooespol\proyectodiscreta\PaginaIntermedioController.class
 com\pooespol\proyectodiscreta\PaginaFacilController.class
+com\pooespol\proyectodiscreta\PaginaFacilController$1.class
 Categorias\Plant.class
 Categorias\Animal.class
+com\pooespol\proyectodiscreta\PaginaFacilController$2.class
 com\pooespol\proyectodiscreta\PaginaPrincipalController.class

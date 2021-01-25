@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="515.0" prefWidth="853.0" style="-fx-background-image: url('file:/C:FondoPrincipal.jpg'); -fx-background-size: 853 515;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pooespol.proyectodiscreta.PaginaPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="515.0" prefWidth="853.0" style="-fx-background-image: url('file:/C:FondoPrincipal.jpg'); -fx-background-size: 853 515;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pooespol.proyectodiscreta.PaginaPrincipalController">
    <children>
       <Label layoutX="194.0" layoutY="49.0" text="TITULO DEL PROYECTO">
          <font>
@@ -21,9 +21,9 @@
             <Image url="@imagenPrincipal.gif" />
          </image>
       </ImageView>
-      <Pane fx:id="containerButton" layoutX="553.0" layoutY="140.0" prefHeight="288.0" prefWidth="245.0">
+      <Pane fx:id="containerButton" layoutX="553.0" layoutY="140.0" prefHeight="230.0" prefWidth="246.0">
          <children>
-            <Button fx:id="buttonEasy" layoutX="15.0" layoutY="93.0" mnemonicParsing="false" onAction="#irNivelFacil" prefHeight="51.0" prefWidth="216.0" style="-fx-background-radius: 20;" text="FACIL">
+            <Button fx:id="buttonEasy" layoutX="15.0" layoutY="49.0" mnemonicParsing="false" onAction="#irNivelFacil" prefHeight="51.0" prefWidth="216.0" style="-fx-background-radius: 20;" text="FACIL">
                <font>
                   <Font name="Britannic Bold" size="23.0" />
                </font>
@@ -31,12 +31,12 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </Button>
-            <Button fx:id="buttonMedium" layoutX="15.0" layoutY="154.0" mnemonicParsing="false" onAction="#irNivelIntermedio" prefHeight="51.0" prefWidth="216.0" style="-fx-background-radius: 20;" text="INTERMEDIO">
+            <Button fx:id="buttonMedium" layoutX="15.0" layoutY="107.0" mnemonicParsing="false" onAction="#irNivelIntermedio" prefHeight="51.0" prefWidth="216.0" style="-fx-background-radius: 20;" text="INTERMEDIO">
                <font>
                   <Font name="Britannic Bold" size="23.0" />
                </font>
             </Button>
-            <Button fx:id="buttonHard" layoutX="15.0" layoutY="216.0" mnemonicParsing="false" onAction="#irNivelDificil" prefHeight="51.0" prefWidth="216.0" style="-fx-background-radius: 20;" text="DIFICIL">
+            <Button fx:id="buttonHard" layoutX="15.0" layoutY="166.0" mnemonicParsing="false" onAction="#irNivelDificil" prefHeight="51.0" prefWidth="216.0" style="-fx-background-radius: 20;" text="DIFICIL">
                <font>
                   <Font name="Britannic Bold" size="23.0" />
                </font>
