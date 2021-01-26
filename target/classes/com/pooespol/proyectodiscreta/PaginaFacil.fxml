@@ -2,11 +2,17 @@
 
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.Circle?>
 
-<AnchorPane id="AnchorPane" fx:id="container" prefHeight="515.0" prefWidth="853.0" style="-fx-background-image: url('file:/C:FondoNiveles.jpg'); -fx-background-size: 853 515;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pooespol.proyectodiscreta.PaginaFacilController">
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="515.0" prefWidth="853.0" style="-fx-background-image: url('file:/C:FondoNiveles.jpg'); -fx-background-size: 853 515;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pooespol.proyectodiscreta.PaginaFacilController">
    <children>
-      <Rectangle fx:id="vennDiagram" arcHeight="5.0" arcWidth="5.0" fill="#ffffff98" height="371.0" layoutX="333.0" layoutY="69.0" stroke="BLACK" strokeType="INSIDE" width="499.0" />
-      <Pane fx:id="containerImages" layoutX="52.0" layoutY="97.0" prefHeight="393.0" prefWidth="260.0" style="-fx-background-color: #b7f9ff;" />
+      <Pane layoutX="305.0" layoutY="68.0" prefHeight="398.0" prefWidth="527.0" style="-fx-border-color: black; -fx-background-color: lightgray;">
+         <children>
+            <Circle fill="#d9ffc799" layoutX="181.0" layoutY="250.0" radius="140.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#f0d1ff99" layoutX="339.0" layoutY="250.0" radius="140.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fill="#66e3e399" layoutX="255.0" layoutY="140.0" radius="140.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </Pane>
+      <Pane fx:id="containerImages" layoutX="34.0" layoutY="82.0" prefHeight="385.0" prefWidth="245.0" style="-fx-background-color: #b7f9ff;" />
    </children>
 </AnchorPane>

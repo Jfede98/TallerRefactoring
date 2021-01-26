@@ -61,6 +61,7 @@ public class PaginaFacilController implements Initializable {
            }
             
         });
+        
         imageView1.setOnMouseDragged(new EventHandler<MouseEvent>(){
            @Override
            public void handle(MouseEvent t) {

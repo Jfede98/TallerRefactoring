@@ -19,7 +19,7 @@ public class Animal extends ObjectSet{
 //    final static String[] terrestre = {"caballo", "cocodrilo", "elefante", "gato", "hipopotamo", "mono", "perro", "pinguino"}; 
 //    final static String[] marino = {"atun", "caballitodemar", "cocodrilo", "hipopotamo", "pato", "pinguino", "pulpo", "tiburon"};
 //    final static String[] aereo = {"buho", "condor", "paloma", "pato"};
-    
+
     final static String[] terrestre = {"elefante", "perro", "caballo", "gato", "mono", "pinguino", "cocodrilo", "hipopotamo"}; 
     final static String[] acuatico = {"pez", "delfin", "tiburon", "caballitodemar", "pezvolador", "cocodrilo", "hipopotamo", "pinguino", "pulpo"};
     final static String[] ave = {"loro", "condor", "avestruz", "pato", "pinguino", "pollito"};
@@ -32,23 +32,12 @@ public class Animal extends ObjectSet{
     public static HashSet<String> voladores = new HashSet<>(Arrays.asList(volador));
     public static HashSet<String> nadadores = new HashSet<>(Arrays.asList(nadador));
     
-    
     public static HashSet<String> unionAll = joinAll(terrestres, acuaticos);
-
-
     
-//    public HashSet<String> joinAll(HashSet<String> s1, HashSet<String> s2){
-//        HashSet<String> s1Clone = (HashSet)s1.clone();
-//        s1Clone.addAll(s2);
-//        return s1Clone;
+//    public static void main (String[] args){
+//
+//        System.out.println(unionAll);
+////   
 //    }
-    
-    public static void main (String[] args){
 
-        System.out.println(unionAll);
-
-    }
-
-    
-    
 }
