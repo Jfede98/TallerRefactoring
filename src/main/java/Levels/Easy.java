@@ -21,9 +21,18 @@ public class Easy {
     static double xRight = PaginaFacilController.rightSet.getCenterX();
     static double yRight = PaginaFacilController.rightSet.getCenterY();        
        
-    static boolean isInsideLeft(){
-        
-        return true;
+    static boolean isInsideLeft(double x, double y){
+        double xAxis = Math.pow((x - xLeft), 2);
+        double yAxis = Math.pow((y - yLeft), 2);
+        double radius = Math.pow(radiusLeft, 2);
+        return ((xAxis + yAxis) <= radius);
+    }
+    
+        static boolean isInsideRight(double x, double y){
+        double xAxis = Math.pow((x - xRight), 2);
+        double yAxis = Math.pow((y - yRight), 2);
+        double radius = Math.pow(radiusRight, 2);
+        return ((xAxis + yAxis) <= radius);
     }
     
 }

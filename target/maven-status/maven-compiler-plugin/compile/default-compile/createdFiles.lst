@@ -1,5 +1,13 @@
+Categories\Fruit.class
 Controllers\PaginaDificilController.class
+Controllers\PaginaIntermedioController.class
+Levels\Easy.class
+Controllers\PaginaFacilController$1.class
+Controllers\PaginaPrincipalController.class
 module-info.class
 Categories\ObjectSet.class
+Controllers\PaginaFacilController.class
+Controllers\PaginaFacilController$2.class
 Controllers\App.class
 Categories\Animal.class
+Categories\Plant.class
