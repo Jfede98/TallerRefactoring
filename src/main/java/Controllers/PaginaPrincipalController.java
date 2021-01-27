@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pooespol.proyectodiscreta;
+package Controllers;
 
-import Categorias.Animal;
-import Categorias.Fruit;
-import Categorias.ObjectSet;
-import Categorias.Plant;
+import Categories.Animal;
+import Categories.Fruit;
+import Categories.ObjectSet;
+import Categories.Plant;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashSet;
@@ -76,7 +76,7 @@ public class PaginaPrincipalController implements Initializable {
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.initModality(Modality.APPLICATION_MODAL);
-            stage.setTitle("Nivel Facil");
+            stage.setTitle(nivel);
             stage.show();
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
@@ -86,7 +86,7 @@ public class PaginaPrincipalController implements Initializable {
     public void setElements(){
         switch(category){
             case "Animales":
-                elements = Animal.unionAll;           
+                elements = Animal.unionEasy;           
                 break;
             case "Frutas":
                 //elements = Fruit.unionAll;

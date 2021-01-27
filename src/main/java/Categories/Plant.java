@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Categorias;
+package Categories;
 
 import java.util.HashSet;
 
@@ -11,7 +11,7 @@ import java.util.HashSet;
  *
  * @author Bryan
  */
-public class Fruit extends ObjectSet{
+public class Plant extends ObjectSet{
 
 
     

@@ -8,9 +8,8 @@
    <children>
       <Pane layoutX="305.0" layoutY="68.0" prefHeight="398.0" prefWidth="527.0" style="-fx-border-color: black; -fx-background-color: lightgray;">
          <children>
-            <Circle fill="#d9ffc799" layoutX="181.0" layoutY="250.0" radius="140.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="#f0d1ff99" layoutX="339.0" layoutY="250.0" radius="140.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="#66e3e399" layoutX="255.0" layoutY="140.0" radius="140.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="left" fill="#d9ffc799" layoutX="172.0" layoutY="199.0" radius="158.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="right" fill="#f2d8ff99" layoutX="355.0" layoutY="199.0" radius="158.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
       </Pane>
       <Pane fx:id="containerImages" layoutX="34.0" layoutY="82.0" prefHeight="385.0" prefWidth="245.0" style="-fx-background-color: #b7f9ff;" />

@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.pooespol.proyectodiscreta;
+package Controllers;
 
-import Categorias.*;
+import Categories.ObjectSet;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,11 +18,9 @@ import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -36,6 +33,8 @@ public class PaginaFacilController implements Initializable {
     ObjectSet type;
     @FXML
     Pane containerImages;
+    @FXML public static Circle leftSet;
+    @FXML public static Circle rightSet;
     
     
     @Override
@@ -93,6 +92,8 @@ public class PaginaFacilController implements Initializable {
             contador++;
         }    
     }
+    
+    
     
 
     

@@ -4,5 +4,5 @@ module com.pooespol.proyectodiscreta {
     requires java.base;
 
     opens com.pooespol.proyectodiscreta to javafx.fxml;
-    exports com.pooespol.proyectodiscreta;
+    exports Controllers;
 }
