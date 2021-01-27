@@ -1,4 +1,4 @@
-package Controllers;
+package com.pooespol.proyectodiscreta;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
