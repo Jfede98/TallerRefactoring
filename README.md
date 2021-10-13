@@ -15,4 +15,4 @@ Se encontró los siguientes code Smellls
 6.- Feature Envy se lo corrigio reemplazando delegación con herencia
 
 Se agrega al repositorio la documentación con la explicación de lo realizado en el repositorio. Esta se encuentra en la carpeta
-Documentacion con la explicacion
+Documentacion con la explicación
